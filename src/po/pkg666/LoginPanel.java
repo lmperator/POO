@@ -19,7 +19,7 @@ public class LoginPanel extends JPanel {
   
     /**
      * @return wprowadzona nazwa użytkownika
-     */
+     */ 
     @Override
     public String getName() {
         return nameField.getText();
