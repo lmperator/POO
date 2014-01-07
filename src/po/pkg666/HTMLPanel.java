@@ -90,15 +90,21 @@ public class HTMLPanel extends JPanel {
                     //  Policz wynik i podaj w nowym okienku, po czym wszystko zamknij
                     // porównaj tmp z text
                     int result = 0;
-                    int length = text.length();
+                    int length = tmp.length();
                     for(int i = 0; i < text.length() ; i++){
                         if(text.charAt(i) == tmp.charAt(i))
                             result++;
                     }
                     long stopTime = System.currentTimeMillis();
                     long elapsedTime = stopTime - startTime;
-                    // Stwarzaj nowe okienko + usuń to stare
-                    Frame2 k = new Frame2(elapsedTime,result,length);
+                    try {
+                        // Stwarzaj nowe okienko + usuń to stare
+                        Frame2 k = new Frame2(elapsedTime,result,length);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(HTMLPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(HTMLPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             });
         }
