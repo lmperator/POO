@@ -90,6 +90,7 @@ public class HTMLPanel extends JPanel {
                     //  Policz wynik i podaj w nowym okienku, po czym wszystko zamknij
                     // porównaj tmp z text
                     int result = 0;
+                    int length = text.length();
                     for(int i = 0; i < text.length() ; i++){
                         if(text.charAt(i) == tmp.charAt(i))
                             result++;
@@ -97,7 +98,7 @@ public class HTMLPanel extends JPanel {
                     long stopTime = System.currentTimeMillis();
                     long elapsedTime = stopTime - startTime;
                     // Stwarzaj nowe okienko + usuń to stare
-                    Frame2 k = new Frame2(elapsedTime,result);
+                    Frame2 k = new Frame2(elapsedTime,result,length);
                 }
             });
         }
