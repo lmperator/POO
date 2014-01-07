@@ -16,7 +16,7 @@ public class LoginPanel extends JPanel {
     private JPasswordField passField; //POLE NA HASŁO
     private JButton loginButton; //PRZYCISK LOGOWANIA
     private LoginListener listener; //SŁUCHACZ PRZYCISKU
- 
+  
     /**
      * @return wprowadzona nazwa użytkownika
      */
